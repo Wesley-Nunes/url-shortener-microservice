@@ -1,0 +1,28 @@
+{
+  "name": "url-shortener-microservice",
+  "version": "0.1.0",
+  "description": "URL Shortener Microservice",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node --watch src/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Wesley-Nunes/url-shortener-microservice.git"
+  },
+  "author": "@Wesley-Nunes",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Wesley-Nunes/url-shortener-microservice/issues"
+  },
+  "homepage": "https://github.com/Wesley-Nunes/url-shortener-microservice#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "mongoose": "^8.5.1"
+  },
+  "engines": {
+    "node": ">=20.0.0 <21"
+  }
+}

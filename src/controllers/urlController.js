@@ -19,3 +19,18 @@ export const createShortUrl = async (req, res) => {
 
 	res.json(response);
 };
+
+export const getShortUrl = async (req, res) => {
+	const { short_url } = req.params;
+	try {
+		const urlEntry = await Url.findOne({ short_url });
+		if (urlEntry) {
+			res.redirect(urlEntry.original_url);
+		} else {
+			res.status(404).json({ "error": "No short URL found for the given input" });
+		}
+	} catch (err) {
+		res.status(500).json({ error: 'Internal Server Error' });
+	}
+};
+

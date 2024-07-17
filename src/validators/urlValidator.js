@@ -32,6 +32,7 @@ export const validateShortUrl = async (req, res, next) => {
 			.status(400)
 			.json({ error: 'The request payload is missing.' });
 	}
+	/*
 	if (invalidKey) {
 		return res
 			.status(422)
@@ -42,7 +43,8 @@ export const validateShortUrl = async (req, res, next) => {
 			.status(422)
 			.json({ error: 'Invalid payload: url value is required and must be a string.' });
 	}
-	if (await invalidUrl(urlValue)) {
+	*/
+	if (await invalidUrl(urlValue) || invalidValue || invalidKey) {
 		return res.status(422).json({ error: 'invalid url' });
 	}
 

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>URL Shortener Microservice | freeCodeCamp.org</title>
+		<link rel="icon" type="image/png" href="https://cdn.freecodecamp.org/universal/favicons/favicon-16x16.png" />
+		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+		<link href="./style.css" rel="stylesheet" type="text/css" />
+		<script src="./main.js" type="module" defer></script>
+	</head>
+	<body>
+		<div class="container">
+			<h1 class="title">URL Shortener Microservice</h1>
+			<main class="main-container">
+				<section class="form-section">
+					<form id="apiForm" class="form">
+						<fieldset class="fieldset">
+							<legend class="legend">URL Shortener</legend>
+							<label for="url_input" class="label">URL:</label>
+							<input id="url_input" type="text" name="url" class="input" placeholder="https://www.freecodecamp.org/" required />
+							<input type="submit" value="POST URL" class="button" />
+						</fieldset>
+					</form>
+					<div id="result" class="result json-container"></div>
+				</section>
+				<section class="usage-section">
+					<h2>How to Use the API</h2>
+					<p>To shorten a URL, make a POST request to the following endpoint with a JSON payload:</p>
+					<pre class="json-pretty"><code>POST /api/shorturl</code></pre>
+					<p>Example payload:</p>
+					<pre class="json-pretty"><code>{
+	<b>"url":</b> "https://www.example.com"
+}</code></pre>
+					<p>Example response:</p>
+					<pre class="json-pretty"><code>{
+	<b>"original_url":</b> "https://www.example.com",
+	<b>"short_url":</b> "1"
+}</code></pre>
+					<p>Accessing: <code class="json-pretty">/api/shorturl/1</code></p>
+					<p>Will Redirect to: <code class="json-pretty">https://www.example.com</code></p>
+				</section>
+			</main>
+		</div>
+		<footer class="footer">
+			<p>Challenge of <a href="https://www.freecodecamp.org/">freeCodeCamp.org</a> Coded by <a href="https://www.linkedin.com/in/dev-wesley-nunes/">@Wesley-Nunes</a></p>
+		</footer>
+	</body>
+</html>

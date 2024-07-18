@@ -96,6 +96,7 @@ body {
 .json-pretty {
 	font-size: 14px;
 	color: #0062ca;
+	overflow-x: auto;
 }
 
 .json-pretty b {
@@ -138,8 +139,6 @@ body {
 	color: white;
 	text-align: center;
 	padding: 10px 0;
-	position: fixed;
-	bottom: 0;
 }
 
 .footer a {
